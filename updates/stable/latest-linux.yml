@@ -1,0 +1,9 @@
+version: 1.0.4
+files:
+  - url: https://github.com/JulianBa-12/polaris/releases/download/v1.0.4/Polaris-Client-1.0.4-linux-x86_64.AppImage
+    sha512: rLS/aD9/lo9eThNogCDiGNAeJ8xuEbKppyXkW+CZfbawKR3tTOi4RlwyiNPo1qaQHpqhLeF9HKJKcoZ5o55p6Q==
+    size: 109962888
+    blockMapSize: 116380
+path: https://github.com/JulianBa-12/polaris/releases/download/v1.0.4/Polaris-Client-1.0.4-linux-x86_64.AppImage
+sha512: rLS/aD9/lo9eThNogCDiGNAeJ8xuEbKppyXkW+CZfbawKR3tTOi4RlwyiNPo1qaQHpqhLeF9HKJKcoZ5o55p6Q==
+releaseDate: '2026-11-17T16:04:20.879Z'
