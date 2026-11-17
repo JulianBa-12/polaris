@@ -112,7 +112,7 @@
     return el;
   }
   const $ = (s, r = document) => r.querySelector(s);
-  const fmtDate = (t) => (t ? new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(new Date(t)) : '');
+  const fmtDate = (t) => { const d = new Date(t); return t && !isNaN(d) ? new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: 'short', year: 'numeric' }).format(d) : ''; };
   const fmtNum = (n) => new Intl.NumberFormat('en-US').format(n || 0);
   const plural = (n, one, many) => fmtNum(n) + ' ' + (n === 1 ? one : many);
   const fmtSize = (b) => (b > 1048576 ? (b / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1024)) + ' KB');
@@ -370,7 +370,7 @@
   function postCard(a) {
     const [l, c] = ANN[a.type] || ANN.info;
     return h('article', { class: 'card post', 'data-testid': 'card-announcement-' + a.id },
-      h('div', { class: 'post-head' }, h('span', { class: 'tag ' + c, text: l }), h('time', { datetime: new Date(a.t).toISOString(), text: fmtDate(a.t) })),
+      h('div', { class: 'post-head' }, h('span', { class: 'tag ' + c, text: l }), h('time', { datetime: isNaN(new Date(a.t)) ? '' : new Date(a.t).toISOString(), text: fmtDate(a.t) })),
       h('h3', { text: a.title }), h('p', { text: a.text }));
   }
 
