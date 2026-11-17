@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Polaris Client – the fast client for Kirka.io</title>
+  <meta name="description" content="Polaris Client for Kirka.io: downloads for Windows, Linux and macOS, a Community Hub with skins, crosshairs and themes, custom profiles and news.">
+  <meta property="og:title" content="Polaris Client for Kirka.io">
+  <meta property="og:description" content="A fast, customizable Kirka.io client with Skin Studio, Community Hub and performance options for low-end PCs.">
+  <meta name="theme-color" content="#0f1118">
+  <link rel="icon" href="favicon.png">
+  <link rel="preload" href="fonts/satoshi-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main" id="skip">Skip to content</a>
+  <div id="banner" class="banner" hidden></div>
+  <header class="top">
+    <div class="wrap top-in">
+      <a class="brand" href="#/" data-testid="link-home" aria-label="Polaris Client home">
+        <img src="img/logo.png" alt="" width="28" height="28">
+        <span>Polaris</span>
+      </a>
+      <nav class="nav" id="nav" aria-label="Main navigation">
+        <a href="#/" data-route="/">Home</a>
+        <a href="#/hub" data-route="/hub">Community Hub</a>
+        <a href="#/profile" data-route="/profile">Profiles</a>
+        <a href="#/news" data-route="/news">News</a>
+        <a href="#/feedback" data-route="/feedback">Feedback</a>
+      </nav>
+      <div class="top-actions">
+        <a class="btn btn-ghost" href="#/account" id="account-btn" data-testid="link-account">Sign in</a>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" data-testid="button-menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"></main>
+  <footer class="foot">
+    <div class="wrap foot-in">
+      <div>
+        <div class="brand small"><img src="img/logo.png" alt="" width="20" height="20"><span>Polaris Client</span></div>
+        <p class="muted">Unofficial client for Kirka.io. Polaris is not affiliated with Kirka.io and does not modify the game or its servers.</p>
+      </div>
+      <div class="foot-meta muted" id="foot-meta">Loading community server …</div>
+    </div>
+  </footer>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
